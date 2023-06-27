@@ -1,0 +1,7 @@
+[user]
+	email = mail@dimitrijedobrota.com
+	name = Dimitrije Dobrota
+[core]
+	editor = vim
+[init]
+	defaultBranch = master
