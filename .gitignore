@@ -6,5 +6,6 @@
 .ssh
 
 .xdg/cache
+.xdg/config/wget-hsts
 .xdg/data
 .xdg/state
