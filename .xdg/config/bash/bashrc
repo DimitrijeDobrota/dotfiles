@@ -9,3 +9,5 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias wget='wget --hsts-file="$XDG_CONFIG_HOME/wget-hsts"'
 
 export MAKEFLAGS="-j8"
+
+export GPG_TTY="$TTY"
