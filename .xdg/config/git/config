@@ -1,7 +1,10 @@
 [user]
 	email = mail@dimitrijedobrota.com
 	name = Dimitrije Dobrota
+	signingkey = 13BEE767F44D779F
 [core]
 	editor = vim
 [init]
 	defaultBranch = master
+[commit]
+	gpgsign = true
