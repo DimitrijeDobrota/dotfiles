@@ -11,7 +11,7 @@ export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass-store"
 export PASSWORD_STORE_ENABLE_EXTENSIONS=true
-export PASSWORD_STORE_EXTENSIONS_DIR=/usr/local/lib/password-store/extensions
+export PASSWORD_STORE_EXTENSIONS_DIR="$XDG_DATA_HOME/pass-store/.extensions"
 
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 
