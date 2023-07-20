@@ -14,3 +14,17 @@ set undodir=$XDG_STATE_HOME/vim/undo     | call mkdir(&undodir,   'p')
 set viewdir=$XDG_STATE_HOME/vim/view     | call mkdir(&viewdir,   'p')
 
 if !has('nvim') | set viminfofile=$XDG_STATE_HOME/vim/viminfo | endif
+set nocompatible
+
+set ruler
+set number
+
+set spell
+
+set ignorecase
+set smartcase
+
+set incsearch
+set hlsearch
+
+set list listchars=tab:\ \ ,trail:.
