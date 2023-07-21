@@ -30,17 +30,62 @@ Plugin 'keremc/asyncomplete-clang.vim'
 call vundle#end()
 filetype plugin indent on
 
-set ruler
-set number
+" GENERAL SETTING
 
+" File settings
+set encoding=utf8
+set autoread
+
+" Spelling
 set spell
+set spelllang=en_us
+set spellsuggest=fast,20
 
+
+" Key remaps
+let g:mapleader="\<space>"
+noremap - :w<CR>:TestNearest<CR>
+
+" Disable arrow keys
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+nnoremap <up> <nop>
+
+" Editor look and feel
+set cursorline
+set history=10000
+set incsearch
+set list listchars=tab:\ \ ,trail:.
+set nowrap
+
+" Search
+set hlsearch
 set ignorecase
+set incsearch
 set smartcase
 
-set incsearch
-set hlsearch
+" Tabs and Spaces
+set tabstop=4   " maximum width of actual tab character
+set softtabstop=4
+set shiftwidth=4  " the size of an indent
+set expandtab     " insert spaces instead of a tab character
 
-set list listchars=tab:\ \ ,trail:.
+" Panes
+set splitbelow
+set splitright
+
+" Set command menu
+set showcmd
+set wildmenu
+set wildmode=full
+
+" Set line numbers
+:set number relativenumber
+:augroup numbertoggle
+: autocmd!
+: autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+: autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
 
 source <sfile>:h/clangd.vim
