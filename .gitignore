@@ -6,6 +6,7 @@
 .ssh
 
 .xdg/cache
+.xdg/config/vim/bundle
 .xdg/config/wget-hsts
 .xdg/data
 .xdg/state

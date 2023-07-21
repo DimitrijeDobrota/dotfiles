@@ -14,7 +14,21 @@ set undodir=$XDG_STATE_HOME/vim/undo     | call mkdir(&undodir,   'p')
 set viewdir=$XDG_STATE_HOME/vim/view     | call mkdir(&viewdir,   'p')
 
 if !has('nvim') | set viminfofile=$XDG_STATE_HOME/vim/viminfo | endif
+
 set nocompatible
+filetype off
+
+set rtp+=$XDG_CONFIG_HOME/vim/bundle/Vundle.vim
+call vundle#begin('$XDG_CONFIG_HOME/vim/bundle')
+Plugin 'prabirshrestha/async.vim'
+Plugin 'prabirshrestha/vim-lsp'
+
+Plugin 'prabirshrestha/asyncomplete.vim'
+Plugin 'prabirshrestha/asyncomplete-lsp.vim'
+Plugin 'keremc/asyncomplete-clang.vim'
+
+call vundle#end()
+filetype plugin indent on
 
 set ruler
 set number
@@ -28,3 +42,5 @@ set incsearch
 set hlsearch
 
 set list listchars=tab:\ \ ,trail:.
+
+source <sfile>:h/clangd.vim
