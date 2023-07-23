@@ -91,4 +91,6 @@ set wildmode=full
 : autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
 
+highlight Visual ctermfg=yellow ctermbg=gray
+
 source <sfile>:h/clangd.vim
