@@ -5,9 +5,21 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Source functions if exist
+function_file=${XDG_CONFIG_HOME}/bash/bash_functions
+[[ -f "$function_file" ]] && source "$function_file"
+unset function_file
+
+# Dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+complete -F __git_wrap__git_main dotfiles
+
+# Aliases
 alias wget='wget --hsts-file="$XDG_CONFIG_HOME/wget-hsts"'
 
+# Variables
+export GPG_TTY=$(tty)
 export MAKEFLAGS="-j8"
 
-export GPG_TTY=$(tty)
+# Customization
+PS1="$(battery_status) | $GREEN\u [ $NORMAL\w$GREEN ]$ $NORMAL"

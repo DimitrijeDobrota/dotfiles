@@ -1,0 +1,21 @@
+#
+# ${XDG_CONFIG_HOME}/bash/bash_functions
+#
+
+battery_status(){
+    BATTERY=/sys/class/power_supply/BAT0
+    CHARGE=$(cat ${BATTERY}/capacity)
+    COLOUR="$RED"
+
+    [ "$CHARGE" -gt "99" ] && CHARGE=100
+    [ "$CHARGE" -gt "15" ] && COLOUR=$YELLOW
+    [ "$CHARGE" -gt "30" ] && COLOUR=$GREEN
+
+    echo -e "${COLOUR}${CHARGE}%$NORMAL"
+}
+
+export NORMAL="\[\e[0m\]"
+export BOLD="\[\e[1m\]"
+export RED="\[\e[1;31m\]"
+export GREEN="\[\e[1;32m\]"
+export YELLOW="\[\e[1;33m\]"
