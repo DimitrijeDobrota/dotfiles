@@ -32,5 +32,17 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-slstatus 2>&1 >/dev/null &
-exec dwm
+if command -v slstatus &> /dev/null; then
+    slstatus 2>&1 >/dev/null &
+else
+    echo "Warning: slstatus does not exist!"
+fi
+
+if command -v dwm &> /dev/null; then
+    while true; do
+        dwm && continue || break
+    done
+else
+    echo "Error: dwm does not exist!"
+    exit 1
+fi
