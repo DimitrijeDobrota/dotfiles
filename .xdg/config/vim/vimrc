@@ -30,6 +30,8 @@ Plugin 'keremc/asyncomplete-clang.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'bfrg/vim-cpp-modern'
 
+Plugin 'morhetz/gruvbox'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -61,6 +63,14 @@ set history=10000
 set incsearch
 set list listchars=tab:\ \ ,trail:.
 set nowrap
+
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+
+set t_Co=256
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+set termguicolors
 
 " Search
 set hlsearch
@@ -94,3 +104,4 @@ set wildmode=full
 highlight Visual ctermfg=yellow ctermbg=gray
 
 source <sfile>:h/clangd.vim
+source <sfile>:h/gruvbox.vim
