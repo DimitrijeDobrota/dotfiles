@@ -30,6 +30,8 @@ Plugin 'keremc/asyncomplete-clang.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'bfrg/vim-cpp-modern'
 
+Plugin 'vimwiki/vimwiki'
+
 Plugin 'morhetz/gruvbox'
 
 call vundle#end()
@@ -40,6 +42,7 @@ filetype plugin indent on
 " File settings
 set encoding=utf8
 set autoread
+set syntax=on
 
 " Spelling
 set spell
@@ -105,3 +108,4 @@ highlight Visual ctermfg=yellow ctermbg=gray
 
 source <sfile>:h/clangd.vim
 source <sfile>:h/gruvbox.vim
+source <sfile>:h/wiki.vim
