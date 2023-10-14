@@ -15,4 +15,5 @@ export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 export PASSWORD_STORE_EXTENSIONS_DIR="$XDG_DATA_HOME/pass-store/.extensions"
 
 export WGETRC="$XDG_CONFIG_HOME/wgetrc"
+export LYNX_CFG="$XDG_CONFIG_HOME/lynx.cfg"
 
