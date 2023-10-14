@@ -1,0 +1,40 @@
+#!/usr/bin/python3
+
+import sys
+import datetime
+
+template = """# {date}
+
+## Daily Checklist
+
+* [ ] Leetcode
+
+
+## Todo
+
+
+
+## ESP
+
+### Effort
+
+
+
+### Success
+
+
+
+### Progress
+
+
+
+## Notes
+"""
+
+
+date = datetime.date.today()
+if len(sys.argv) < 2:
+    date = sys.argv[1].rsplit("/", 1)[1];
+    date = date.split(".", 1)[0];
+
+print(template.format(date = date));
