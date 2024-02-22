@@ -4,6 +4,7 @@
 
 .dotfiles
 .ssh
+.mozilla
 
 .xdg/cache
 .xdg/config/vim/bundle
