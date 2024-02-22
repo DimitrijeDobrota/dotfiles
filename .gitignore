@@ -11,3 +11,7 @@
 .xdg/config/wget-hsts
 .xdg/data
 .xdg/state
+
+!bin
+!bin/*
+bin/.*.swp
