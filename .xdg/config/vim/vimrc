@@ -108,4 +108,5 @@ highlight Visual ctermfg=yellow ctermbg=gray
 
 source <sfile>:h/clangd.vim
 source <sfile>:h/gruvbox.vim
+source <sfile>:h/hex.vim
 source <sfile>:h/wiki.vim
