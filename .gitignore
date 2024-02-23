@@ -6,12 +6,15 @@
 .ssh
 .mozilla
 
-.xdg/cache
-.xdg/config/vim/bundle
-.xdg/config/wget-hsts
-.xdg/data
-.xdg/state
+.xdg/cache/*
+.xdg/config/vim/bundle/*
+.xdg/config/wget-hsts/*
+.xdg/data/*
+.xdg/state/*
 
 !bin
 !bin/*
 bin/.*.swp
+
+!.xdg/data/bash-completion
+!.xdg/data/bash-completion/*
