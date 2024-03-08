@@ -29,6 +29,7 @@ Plugin 'keremc/asyncomplete-clang.vim'
 
 Plugin 'sheerun/vim-polyglot'
 Plugin 'bfrg/vim-cpp-modern'
+Plugin 'calincru/flex-bison-syntax'
 
 Plugin 'vimwiki/vimwiki'
 
