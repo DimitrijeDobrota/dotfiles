@@ -11,7 +11,7 @@ function_file=${XDG_CONFIG_HOME}/bash/bash_functions
 unset function_file
 
 # Dotfiles
-alias dotfiles='/usr/bin/git --git-dir=/home/magaknuto/.dotfiles --work-tree=/home/magaknuto'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 complete -F __git_wrap__git_main dotfiles
 
 # Aliases
