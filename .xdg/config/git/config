@@ -1,7 +1,7 @@
 [user]
 	email = mail@dimitrijedobrota.com
 	name = Dimitrije Dobrota
-	signingkey = 13BEE767F44D779F
+	signingkey = 8110CD8097D1704A
 [core]
 	editor = vim
 [init]
