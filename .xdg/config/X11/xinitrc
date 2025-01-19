@@ -32,6 +32,13 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+if command -v xsetwacom 2>&1 >/dev/null; then
+  penid=$(xsetwacom list devices | grep STYLUS | cut -f2 | cut -d' ' -f2)
+  xsetwacom --set $penid Rotate half
+  xsetwacom --set $penid Button 2 pan
+  xsetwacom --set 10 MapToOutput DisplayPort-0
+fi
+
 if command -v slstatus &> /dev/null; then
     slstatus 2>&1 >/dev/null &
 else
